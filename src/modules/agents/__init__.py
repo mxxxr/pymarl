@@ -14,3 +14,6 @@ REGISTRY["tlc"] = TLCAgent
 
 from .tlc_mlpagent import TLC_MLPAgent
 REGISTRY["tlc_mlp"] = TLC_MLPAgent
+
+from .commnet_agent import COMMNETAgent
+REGISTRY["commnet"] = COMMNETAgent

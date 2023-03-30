@@ -56,5 +56,6 @@ class MultiAgentEnv(object):
                     "obs_shape": self.get_obs_size(),
                     "n_actions": self.get_total_actions(),
                     "n_agents": self.n_agents,
-                    "episode_limit": self.episode_limit}
+                    "episode_limit": self.episode_limit,
+                    "visibility_matrix": self.get_visibility_matrix}
         return env_info

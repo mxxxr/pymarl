@@ -36,6 +36,7 @@ The requirements.txt file can be used to install the necessary packages into a v
 
 ```shell
 python3 src/main.py --config=qmix --env-config=sc2 with env_args.map_name=2s3z
+python3 src/main.py --config=commnet --env-config=sc2 with env_args.map_name=8m
 ```
 
 The config files act as defaults for an algorithm or environment. 

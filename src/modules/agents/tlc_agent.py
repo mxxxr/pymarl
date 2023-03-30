@@ -22,14 +22,6 @@ class AttModel(nn.Module):
 	def forward(self, x, mask):
 		v = F.relu(self.fcv(x))
 		q = F.relu(self.fcq(x))
-		# if len(x.shape) == 2:
-		# 	mask = mask[0]
-		# 	print(q.shape,v.shape,mask.shape)
-		# 	k = F.relu(self.fck(x)).permute(1,0)
-		# 	att = F.softmax(torch.mul(torch.mm(q,k), mask) - 9e15*(1 - mask),dim=1)
-		# 	out = torch.mm(att,v)
-
-		# else:
 		k = F.relu(self.fck(x)).permute(0,2,1)
 		att = F.softmax(torch.mul(torch.bmm(q,k), mask) - 9e15*(1 - mask),dim=2)
 		out = torch.bmm(att,v)

@@ -23,3 +23,9 @@ REGISTRY["tlcSR0comm"] = TLC_SR0CommRunner
 
 from .tlc_runner import TLC_SR1CommRunner
 REGISTRY["tlcSR1comm"] = TLC_SR1CommRunner
+
+# from .tlc_runner import TLC_GraphCommRunner
+# REGISTRY["tlcgraphcomm"] = TLC_GraphCommRunner
+
+from .tlc_runner import TLC_KLCommRunner
+REGISTRY["tlcKLcomm"] = TLC_KLCommRunner

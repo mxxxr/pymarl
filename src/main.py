@@ -1,5 +1,8 @@
-import numpy as np
 import os
+os.environ["MKL_NUM_THREADS"] = "2"
+os.environ["OMP_NUM_THREADS"] = "2"
+
+import numpy as np
 import collections
 from os.path import dirname, abspath
 from copy import deepcopy

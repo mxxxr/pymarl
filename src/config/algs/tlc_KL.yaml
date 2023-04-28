@@ -17,13 +17,10 @@ target_update_interval: 200
 agent_output_type: "q"
 learner: "q_learner"
 double_q: True
-mixer: "qmix"
-mixing_embed_dim: 32
-hypernet_layers: 2
-hypernet_embed: 64
+mixer: # Mixer becomes None
 
 agent: "tlc"
 mac: "comm_mac"
-runner: "tlcScomm"
+runner: "tlcKLcomm"
 
-name: "tlc_qmix"
+name: "tlc_KL"
